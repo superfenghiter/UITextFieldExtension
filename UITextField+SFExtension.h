@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol UITextFieldDelegateSFExtension<UITextFieldDelegate>
+
+@optional
+- (void)textFieldDidChangeEditing:(UITextField *)textField;
+
+@end
+
 @interface UITextField(SFExtension)
+
+- (void)limitInputLengthWithMaximumLength:(NSInteger)maximumLength;
 
 @end
